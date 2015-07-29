@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "HypnosisView.h"
+#import "HypnosisViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,39 +18,49 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen]bounds]];
+  
+  
+
    
    // Create CGRects for frames
    
    CGRect screenRect = self.window.bounds;
    CGRect bigRect = screenRect;
-   bigRect.size.width *= 2.0;
-  
-   
+   bigRect.size.width *= 2;
+
    // Create a scree-sized scroll view and add it to the window
    
    UIScrollView *scrollView = [[UIScrollView alloc]initWithFrame:screenRect];
    scrollView.pagingEnabled = YES;
    [self.window addSubview:scrollView];
+  
    
    // Create a screen-sized hypnosis view and add it to the scroll view
+   
    HypnosisView *hypnosisView = [[HypnosisView alloc]initWithFrame:screenRect];
+   hypnosisView.center = CGPointMake(scrollView.frame.size.width  / 2,
+   scrollView.frame.size.height / 2);
    [scrollView addSubview:hypnosisView];
    
-   // Add a second screen-sized hypnosis view just off the screen to the right
-   screenRect.origin.x += screenRect.size.width;
-   HypnosisView *anotherView = [[HypnosisView alloc]initWithFrame:screenRect];
-   [scrollView addSubview:anotherView];
- 
- 
- // Add a second screen-sized hypnosis view just off the screen to the right
+   // Add second scrollView
    
+   screenRect.origin.x += screenRect.size.width;
+   HypnosisView *secondView = [[HypnosisView alloc]initWithFrame:screenRect];
+   secondView.center = CGPointMake(scrollView.frame.size.width + screenRect.size.width / 2,
+   scrollView.frame.size.height/ 2);
+   [scrollView addSubview:secondView];
+   
+ 
    // Tell the scroll view how big its content area is
    
    scrollView.contentSize = bigRect.size;
-    
-    
+   
+   HypnosisViewController *hvc = [[HypnosisViewController alloc]init];
+   self.window.rootViewController = hvc;
+   
+   // Set window background color and make it visible
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

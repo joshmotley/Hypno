@@ -11,6 +11,8 @@
 		26481EE81B35F079008FB80C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26481EE71B35F079008FB80C /* AppDelegate.m */; };
 		26481EF01B35F079008FB80C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26481EEF1B35F079008FB80C /* Images.xcassets */; };
 		26481EFF1B35F079008FB80C /* HypnosisterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 26481EFE1B35F079008FB80C /* HypnosisterTests.m */; };
+		26527E531B693E6400312AC1 /* HypnosisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26527E521B693E6400312AC1 /* HypnosisViewController.m */; };
+		26527E561B6970E500312AC1 /* ReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26527E551B6970E500312AC1 /* ReminderViewController.m */; };
 		2668F63C1B39AAC9005D7AFA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2668F63B1B39AAC9005D7AFA /* Default-568h@2x.png */; };
 		26926D7D1B3E307C00121C20 /* cartoon.png in Resources */ = {isa = PBXBuildFile; fileRef = 26926D7C1B3E307C00121C20 /* cartoon.png */; };
 		26ABA4441B3900E700F2D92D /* HypnosisView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26ABA4431B3900E700F2D92D /* HypnosisView.m */; };
@@ -36,6 +38,10 @@
 		26481EF81B35F079008FB80C /* HypnosisterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HypnosisterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26481EFD1B35F079008FB80C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26481EFE1B35F079008FB80C /* HypnosisterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HypnosisterTests.m; sourceTree = "<group>"; };
+		26527E511B693E6400312AC1 /* HypnosisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HypnosisViewController.h; path = ../HypnosisViewController.h; sourceTree = "<group>"; };
+		26527E521B693E6400312AC1 /* HypnosisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HypnosisViewController.m; path = ../HypnosisViewController.m; sourceTree = "<group>"; };
+		26527E541B6970E500312AC1 /* ReminderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReminderViewController.h; sourceTree = "<group>"; };
+		26527E551B6970E500312AC1 /* ReminderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReminderViewController.m; sourceTree = "<group>"; };
 		2668F63B1B39AAC9005D7AFA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		26926D7C1B3E307C00121C20 /* cartoon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cartoon.png; path = ../../../cartoon.png; sourceTree = "<group>"; };
 		26ABA4421B3900E700F2D92D /* HypnosisView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HypnosisView.h; sourceTree = "<group>"; };
@@ -85,8 +91,12 @@
 			children = (
 				26481EE61B35F079008FB80C /* AppDelegate.h */,
 				26481EE71B35F079008FB80C /* AppDelegate.m */,
+				26527E541B6970E500312AC1 /* ReminderViewController.h */,
+				26527E551B6970E500312AC1 /* ReminderViewController.m */,
 				26ABA4421B3900E700F2D92D /* HypnosisView.h */,
 				26ABA4431B3900E700F2D92D /* HypnosisView.m */,
+				26527E511B693E6400312AC1 /* HypnosisViewController.h */,
+				26527E521B693E6400312AC1 /* HypnosisViewController.m */,
 				26481EEF1B35F079008FB80C /* Images.xcassets */,
 				26481EE21B35F079008FB80C /* Supporting Files */,
 			);
@@ -219,8 +229,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26527E531B693E6400312AC1 /* HypnosisViewController.m in Sources */,
 				26ABA4441B3900E700F2D92D /* HypnosisView.m in Sources */,
 				26481EE81B35F079008FB80C /* AppDelegate.m in Sources */,
+				26527E561B6970E500312AC1 /* ReminderViewController.m in Sources */,
 				26481EE51B35F079008FB80C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,20 +17,19 @@
 
 -(void)drawRect:(CGRect)rect
 {
-    CGRect bounds = self.bounds;
+    CGRect bounds = self.window.bounds;
     
     //Figure out the center of the bounds rectangle
     CGPoint center;
-    center.x = bounds.origin.x + bounds.size.width / 2.0;
-    center.y = bounds.origin.y + bounds.size.height / 2.0;
+    center.x = (bounds.origin.x + bounds.size.width) / 2.0;
+    center.y = (bounds.origin.y + bounds.size.height) / 2.0;
 
     
     
     
     
    // The largest circle will circumscribe the view
-    float maxRadius = hypot(bounds.size.width, bounds.size.height)/2.0;
-    
+    float maxRadius = hypot(bounds.size.width, bounds.size.height/ 2);
     UIBezierPath *path = [[UIBezierPath alloc]init];
     
     for(float currentRadius=maxRadius; currentRadius >0; currentRadius -= 20){
@@ -65,6 +64,7 @@
 
 -(instancetype)initWithFrame:(CGRect)frame
 {
+    
     self = [super initWithFrame:frame];
     if(self){
         // All HypnosisViews start with a clear background color
