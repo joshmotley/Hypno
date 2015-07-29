@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "HypnosisView.h"
 #import "HypnosisViewController.h"
+#import "ReminderViewController.h"
 
 @interface AppDelegate ()
 
@@ -52,13 +53,16 @@
    scrollView.frame.size.height/ 2);
    [scrollView addSubview:secondView];
    
+   ReminderViewController *rvc = [[ReminderViewController alloc]init];
+   
+   
  
    // Tell the scroll view how big its content area is
    
    scrollView.contentSize = bigRect.size;
    
    HypnosisViewController *hvc = [[HypnosisViewController alloc]init];
-   self.window.rootViewController = hvc;
+   self.window.rootViewController = rvc;
    
    // Set window background color and make it visible
     

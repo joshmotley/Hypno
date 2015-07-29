@@ -8,6 +8,17 @@
 
 #import "ReminderViewController.h"
 
-@implementation UIViewController (ReminderViewController)
+@interface ReminderViewController ()
+@property (nonatomic, weak) IBOutlet UIDatePicker *datePicker;
+@end
+
+@implementation  ReminderViewController : UIViewController
+
+// Action button for date picker that will create a local notification at some point
+
+- (IBAction)addReminder:(id)sender {
+    NSDate *date = self.datePicker.date;
+    NSLog(@"Setting a reminder for %@", date);
+}
 
 @end

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIViewController (ReminderViewController)
+@interface ReminderViewController : UIViewController
 
 @end
