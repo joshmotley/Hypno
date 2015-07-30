@@ -25,45 +25,17 @@
   
 
    
-   // Create CGRects for frames
-   
-   CGRect screenRect = self.window.bounds;
-   CGRect bigRect = screenRect;
-   bigRect.size.width *= 2;
 
-   // Create a scree-sized scroll view and add it to the window
-   
-   UIScrollView *scrollView = [[UIScrollView alloc]initWithFrame:screenRect];
-   scrollView.pagingEnabled = YES;
-   [self.window addSubview:scrollView];
-  
-   
-   // Create a screen-sized hypnosis view and add it to the scroll view
-   
-   HypnosisView *hypnosisView = [[HypnosisView alloc]initWithFrame:screenRect];
-   hypnosisView.center = CGPointMake(scrollView.frame.size.width  / 2,
-   scrollView.frame.size.height / 2);
-   [scrollView addSubview:hypnosisView];
-   
-   // Add second scrollView
-   
-   screenRect.origin.x += screenRect.size.width;
-   HypnosisView *secondView = [[HypnosisView alloc]initWithFrame:screenRect];
-   secondView.center = CGPointMake(scrollView.frame.size.width + screenRect.size.width / 2,
-   scrollView.frame.size.height/ 2);
-   [scrollView addSubview:secondView];
    
    ReminderViewController *rvc = [[ReminderViewController alloc]init];
    
    
  
-   // Tell the scroll view how big its content area is
-   
-   scrollView.contentSize = bigRect.size;
+
    
    // Create instance of HypnosisViewController and make its view 'scrollView'
    HypnosisViewController *hvc = [[HypnosisViewController alloc]init];
-   hvc.view = scrollView;
+   
    
    // Create instance of UITabBarController
    UITabBarController *tbc = [[UITabBarController alloc]init];

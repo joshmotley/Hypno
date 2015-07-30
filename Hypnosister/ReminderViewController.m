@@ -20,6 +20,8 @@
     UILocalNotification *note = [[UILocalNotification alloc]init];
     note.alertBody = @"Hypnotize me!";
     note.fireDate = self.datePicker.date;
+    
+    [[UIApplication sharedApplication] scheduleLocalNotification:note];
 }
 
 -(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -32,6 +34,11 @@
         
     }
     return self;
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{ [super viewWillAppear:animated];
+    self.datePicker.minimumDate = [NSDate dateWithTimeIntervalSinceNow:60];
 }
 
 @end
