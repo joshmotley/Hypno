@@ -17,8 +17,21 @@
 // Action button for date picker that will create a local notification at some point
 
 - (IBAction)addReminder:(id)sender {
-    NSDate *date = self.datePicker.date;
-    NSLog(@"Setting a reminder for %@", date);
+    UILocalNotification *note = [[UILocalNotification alloc]init];
+    note.alertBody = @"Hypnotize me!";
+    note.fireDate = self.datePicker.date;
+}
+
+-(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if(self){
+        self.tabBarItem.title = @"Reminder";
+        UIImage *i = [UIImage imageNamed:@"Time"];
+        self.tabBarItem.image = i;
+        
+    }
+    return self;
 }
 
 @end

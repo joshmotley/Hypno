@@ -61,8 +61,16 @@
    
    scrollView.contentSize = bigRect.size;
    
+   // Create instance of HypnosisViewController and make its view 'scrollView'
    HypnosisViewController *hvc = [[HypnosisViewController alloc]init];
-   self.window.rootViewController = rvc;
+   hvc.view = scrollView;
+   
+   // Create instance of UITabBarController
+   UITabBarController *tbc = [[UITabBarController alloc]init];
+   tbc.viewControllers = @[rvc, hvc];
+   
+   // Make tab bar controller the window's rootViewController
+   self.window.rootViewController = tbc;
    
    // Set window background color and make it visible
     
